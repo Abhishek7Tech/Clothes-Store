@@ -1,0 +1,14 @@
+@import "base";
+@import "mixins";
+@import "variables";
+@import "header";
+@import "slideshow";
+@import "featured";
+@import "Button";
+@import "footer";
+
+
+body{
+    grid-template-columns: repeat(12/1fr);
+    grid-template-rows: auto,min-content;
+}

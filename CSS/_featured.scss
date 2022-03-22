@@ -1,0 +1,55 @@
+.featured-products{
+    display: grid;
+    grid-column: 1/13;
+    grid-row: 8/11;
+    margin-top: 20rem;
+    list-style-type: none;
+
+    &:hover .details{
+        opacity: 1;
+        display: list-item;
+        transition: all 0.5s 0.5s;
+        cursor: pointer;
+    }
+
+}
+.product-des{
+    grid-column: 5/8;
+    text-align: center;
+    margin-bottom: 4rem;
+
+  .heading{
+        font-size: font(xl);
+        font-weight: lighter;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+.Skirt{width: 100%;
+    grid-column: 2/4;
+    display: grid;
+   position: relative;
+    @include products;
+   .details{
+    @include position-skirt;
+}
+}
+
+.Pant{width: 100%;
+    position: relative;
+    grid-column: 6/8;
+    @include products;
+    .details{
+@include position-pant;
+}
+}
+
+.Shirt{width: 100%;
+  grid-column:10/12;
+  position: relative;
+  @include products;
+  .details{
+    @include position-shirt;
+    }
+    
+}

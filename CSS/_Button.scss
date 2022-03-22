@@ -1,0 +1,100 @@
+.see-more{
+    display: grid;
+    grid-template-columns:repeat(12 , 1fr);
+   grid-template-rows: auto,min-content;
+}
+
+
+.buttons{
+    display: grid;
+    grid-column: 6/8;
+    margin-bottom: 1rem;
+    width: 12rem;
+    height: 2rem;
+    display: flex;
+    position: relative;       
+    background-color: color(secondary);
+    border-radius: 15px;
+    
+    &:hover{
+        background-color: color(primary);
+        transition: all 0.5s 0.5s; 
+         cursor: pointer; 
+    }
+&:hover .text span{
+    color: color(secondary);
+    transition: all 0.5s 0.5s; 
+    
+}
+
+    &:hover .lines{
+        transition: all 0.5s 0.5s; 
+    }
+    &:hover .line-1{
+        @include lines;   
+        width: 1.5rem;
+        transform-origin: right;  
+        transition: all 0.5s 0.5s; 
+    
+    }
+    
+    &:hover .line-1{
+        width: 2.5rem;
+        
+        transition: all 0.5s 0.5s;
+    }
+    
+    &:hover .line-2{
+        width: 2.5rem;
+        
+        transition: all 0.5s 0.5s;
+    }
+
+    &:hover .line-3{
+        width: 2.5rem;
+    
+        transition: all 0.5s 0.5s;
+    }
+
+}
+
+.text{
+    margin-left: 4rem;
+    text-align: center;
+
+    padding-top: 4px;
+}
+
+
+.text span{             
+    font-size: font(xs) - 0.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.lines{
+    width: 2rem;
+    height: 2rem;
+    background-color:color(primary);
+    border-radius: 50%;    
+    position: absolute;
+    left: 0;
+    
+     
+    .line-2{
+      @include lines;   
+      width: 1.6rem;
+      transform: rotate(45deg);
+    
+      transform-origin: right;
+    }
+
+    .line-3{
+        width: 1.6rem;
+        @include lines;
+        transform: rotate(-45deg);
+     
+    transform-origin: right;
+    }
+}

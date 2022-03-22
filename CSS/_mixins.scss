@@ -1,0 +1,121 @@
+
+@mixin navigation{
+    list-style-type: none;
+    display: flex;
+   justify-content:space-between;
+   align-items: center;
+  }
+  
+  @mixin  navigation-styles {
+      text-decoration: none;
+      font-size: font(xxs);
+      color: color(primary);
+      transition: all 1s;
+      &:hover{
+          color:lighten(color(primary),40%);
+      }
+  }
+  
+  @mixin content {
+      background-color: rgba(color(secondary), 0.7);
+      position:absolute;
+  }
+  
+  @mixin products {
+       
+      img{
+          width: 30vh;
+      }
+  
+      .details{
+          border: 2px solid color(primary);
+          width: 8rem;
+          height: 8rem;
+          text-align: center;
+          background-color: rgba(color(tertiary), 0.3);
+            position: relative;
+           opacity: 0;
+           display: hidden;
+      &:hover{
+        background-color: color(tertiary);
+        transition: all 0.5s 0.5s ;
+    }
+   
+      }
+          
+  
+      .name{
+          font-size: font(md);
+          padding-top: 5px;
+          font-weight: lighter;
+          font-family:'Times New Roman', Times, serif;
+      }
+  
+      .price{
+          font-size: font(xs);
+      }
+  
+      .link{
+         border: 2px solid #f5b149;
+         width: 6rem;
+         margin: 0.5rem 1rem;
+         &:hover{
+            background-color: color(qaurtennary);
+            transition: all 0.5s 0.5s;
+        }
+       
+      }
+      a{
+          text-decoration: none;
+      }
+        
+    }
+
+    @mixin position-skirt{
+        bottom: 150%;
+        left: 15%;
+    }
+
+    @mixin position-pant{
+        bottom: 55%;
+        left: 14%;
+    }
+
+    @mixin position-shirt {
+        bottom: 45%;
+        left: 14%;
+        
+    }
+@mixin lines{
+    background-color:color(secondary);
+    position: absolute;
+    height: 0.1rem;
+    top: 45%;
+    
+
+}
+@mixin footer {
+
+    text-align: center;
+    h3{
+        font-size: font(xs);
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+      }
+      li{
+          list-style-type: none;
+           margin-top: 0.2rem; 
+        }
+      a{
+          text-decoration: none;
+      }
+} 
+
+@mixin icons{
+    a{
+        margin-top: 0.2rem;
+        font-size: font(xxs);
+    }
+    
+
+}

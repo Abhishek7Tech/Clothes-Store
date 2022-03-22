@@ -1,0 +1,109 @@
+.header {
+    grid-column: 1 / 13;
+   grid-row: 1/4;
+   display: grid;
+    background-color: color(tertiary);
+    
+  .logo{
+      grid-column: 1/2;
+      padding: 5px;
+    }
+
+   .logo img{
+       width: 6rem;
+       height: 4rem;
+   }
+   .header-menu{
+       padding-top: 15px;
+       grid-column: 9/13;
+       grid-row: 1/1;
+    }
+
+    .header-list{
+        @include navigation;
+        padding-right: 15px;
+    }
+    .header-list-item{
+        @include navigation-styles;
+    }
+
+    .search-space{
+        width: 6em;
+        margin-right: 8px;
+        border-radius: 5%;
+    }
+ .button{
+     text-align: center;
+     background-color:color(qaurtennary) ;
+     border: none;
+     border-radius: 10%;
+}
+  .Shop-Name{
+      grid-column: 6/8;
+      grid-row: 2/3;
+    }
+
+  .Heading {
+    font-size: font(xl);
+    font-family:'Great Vibes',sans-serif, cursive;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    margin-top: 1rem;
+}
+.Sub-Heading{
+    font-size: font(xs);
+    font-family:Great Vibes,sans-serif, cursive;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+}
+
+  .nav{
+      margin-top: 4.5rem;
+      grid-column: 4/9;
+      grid-row: 3/4;
+    }
+
+    .nav-1-list{
+      @include navigation;
+    
+    }
+
+    .nav-1-list-item a{
+        @include navigation-styles;
+    }
+
+    .gift{
+        position: relative;
+        background-color: color(qaurtennary);
+        transition:ease-in-out .5s;
+        z-index: 200;    
+        &:hover{
+            background-color: color(secondary);
+            
+        } 
+
+        &:hover .list-ranges{
+            visibility: visible;
+            opacity: 1; 
+            transition: ease-in-out 1s ;
+        }
+    }
+.list-ranges{
+    list-style-type: none;
+   background-color:lighten(color(tertiary), 15%);
+   position: absolute;
+   width: 4.2rem;
+   border: 1px solid orangered;
+   margin-top: 0.5rem;
+   visibility: hidden;
+   opacity: 0;
+}
+
+.range a{
+    font-size: font(xxxs);
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 15px;
+}
+
+}
